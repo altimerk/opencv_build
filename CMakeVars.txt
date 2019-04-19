@@ -114,8 +114,8 @@ BUILD_WEBP=OFF
 BUILD_WITH_DEBUG_INFO=OFF
 BUILD_WITH_DYNAMIC_IPP=OFF
 BUILD_ZLIB=OFF
-BUILD_opencv_apps=ON
-BUILD_opencv_aruco=ON
+BUILD_opencv_apps=OFF
+BUILD_opencv_aruco=OFF
 BUILD_opencv_bgsegm=ON
 BUILD_opencv_bioinspired=ON
 BUILD_opencv_calib3d=ON
@@ -167,7 +167,7 @@ BUILD_opencv_rgbd=ON
 BUILD_opencv_saliency=ON
 BUILD_opencv_shape=ON
 BUILD_opencv_stereo=ON
-BUILD_opencv_stitching=ON
+BUILD_opencv_stitching=OFF
 BUILD_opencv_structured_light=ON
 BUILD_opencv_superres=ON
 BUILD_opencv_surface_matching=ON
@@ -179,10 +179,10 @@ BUILD_opencv_videoio=ON
 BUILD_opencv_videostab=ON
 BUILD_opencv_viz=ON
 BUILD_opencv_world=OFF
-BUILD_opencv_xfeatures2d=ON
-BUILD_opencv_ximgproc=ON
-BUILD_opencv_xobjdetect=ON
-BUILD_opencv_xphoto=ON
+BUILD_opencv_xfeatures2d=OFF
+BUILD_opencv_ximgproc=OFF
+BUILD_opencv_xobjdetect=OFF
+BUILD_opencv_xphoto=OFF
 CACHED_CPU_BASELINE_FLAGS= -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3
 CACHED_CPU_DISPATCH_AVX2_FLAGS= -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3  -mssse3 -msse4.1 -mpopcnt -msse4.2 -mf16c -mfma -mavx -mavx2
 CACHED_CPU_DISPATCH_AVX512_SKX_FLAGS= -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3  -mssse3 -msse4.1 -mpopcnt -msse4.2 -mf16c -mfma -mavx -mavx2 -mavx512f -mavx512f -mavx512cd -mavx512vl -mavx512bw -mavx512dq
@@ -203,8 +203,7 @@ CMAKE_AUTOMOC_MACRO_NAMES=Q_OBJECT;Q_GADGET;Q_NAMESPACE
 CMAKE_BASE_NAME=gcc
 CMAKE_BINARY_DIR=/u03/build
 CMAKE_BUILD_TOOL=/usr/bin/make
-CMAKE_BUILD_TYPE=Release
-CMAKE_BUILD_TYPE=Release
+CMAKE_BUILD_TYPE=Debug
 CMAKE_C11_COMPILE_FEATURES=c_std_11;c_static_assert
 CMAKE_C11_EXTENSION_COMPILE_OPTION=-std=gnu11
 CMAKE_C11_STANDARD_COMPILE_OPTION=-std=c11
@@ -596,7 +595,7 @@ CMAKE_SYSTEM_SPECIFIC_INITIALIZE_LOADED=1
 CMAKE_SYSTEM_VERSION=4.18.0-17-generic
 CMAKE_TESTING_ENABLED=1
 CMAKE_THREAD_LIBS_INIT=
-CMAKE_TRY_COMPILE_CONFIGURATION=Release
+CMAKE_TRY_COMPILE_CONFIGURATION=Debug
 CMAKE_TWEAK_VERSION=0
 CMAKE_UNAME=/bin/uname
 CMAKE_USE_PTHREADS_INIT=1
@@ -624,13 +623,13 @@ CPACK_BINARY_WIX=
 CPACK_BINARY_ZIP=
 CPACK_BUILD_SOURCE_DIRS=/u03/opencv-4.1.0;/u03/build
 CPACK_CMAKE_GENERATOR=Unix Makefiles
-CPACK_COMPONENTS_ALL=dev;libs;licenses;main;scripts
-CPACK_COMPONENT_DEV_CONFLICTS=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
+CPACK_COMPONENTS_ALL=dev;libs;licenses;scripts
+CPACK_COMPONENT_DEV_CONFLICTS=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
 CPACK_COMPONENT_DEV_DEPENDS=libs
 CPACK_COMPONENT_DEV_DESCRIPTION=Development files for Open Source Computer Vision Library
 CPACK_COMPONENT_DEV_DISPLAY_NAME=Development files
-CPACK_COMPONENT_DEV_PROVIDES=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
-CPACK_COMPONENT_DEV_REPLACES=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
+CPACK_COMPONENT_DEV_PROVIDES=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
+CPACK_COMPONENT_DEV_REPLACES=libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev
 CPACK_COMPONENT_DOCS_CONFLICTS=opencv-doc
 CPACK_COMPONENT_DOCS_DEPENDS=libs
 CPACK_COMPONENT_DOCS_DESCRIPTION=Documentation for Open Source Computer Vision Library
@@ -641,11 +640,11 @@ CPACK_COMPONENT_JAVA_DESCRIPTION=Java bindings for Open Source Computer Vision L
 CPACK_COMPONENT_JAVA_DISPLAY_NAME=Java bindings
 CPACK_COMPONENT_JAVA_PROVIDES=libopencv4.0-java, libopencv4.0-jni
 CPACK_COMPONENT_JAVA_REPLACES=libopencv4.0-java, libopencv4.0-jni
-CPACK_COMPONENT_LIBS_CONFLICTS=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
+CPACK_COMPONENT_LIBS_CONFLICTS=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
 CPACK_COMPONENT_LIBS_DESCRIPTION=Open Computer Vision Library
 CPACK_COMPONENT_LIBS_DISPLAY_NAME=Libraries and data
-CPACK_COMPONENT_LIBS_PROVIDES=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
-CPACK_COMPONENT_LIBS_REPLACES=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
+CPACK_COMPONENT_LIBS_PROVIDES=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
+CPACK_COMPONENT_LIBS_REPLACES=opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0
 CPACK_COMPONENT_LIBS_REQUIRED=TRUE
 CPACK_COMPONENT_PYTHON_CONFLICTS=python-opencv
 CPACK_COMPONENT_PYTHON_DEPENDS=libs
@@ -1550,7 +1549,7 @@ HAVE_VIDEOIO=
 HAVE_VTK=ON
 HAVE_WEBP=1
 HAVE_WORDS_BIGENDIAN=TRUE
-HAVE_opencv_aruco=ON
+HAVE_opencv_aruco=OFF
 HAVE_opencv_bgsegm=ON
 HAVE_opencv_bioinspired=ON
 HAVE_opencv_calib3d=ON
@@ -1565,7 +1564,7 @@ HAVE_opencv_cudafilters=ON
 HAVE_opencv_cudaimgproc=ON
 HAVE_opencv_cudalegacy=ON
 HAVE_opencv_cudaobjdetect=ON
-HAVE_opencv_cudaoptflow=ON
+HAVE_opencv_cudaoptflow=OFF
 HAVE_opencv_cudastereo=ON
 HAVE_opencv_cudawarping=ON
 HAVE_opencv_cudev=ON
@@ -1593,7 +1592,7 @@ HAVE_opencv_line_descriptor=ON
 HAVE_opencv_matlab=OFF
 HAVE_opencv_ml=ON
 HAVE_opencv_objdetect=ON
-HAVE_opencv_optflow=ON
+HAVE_opencv_optflow=OFF
 HAVE_opencv_ovis=OFF
 HAVE_opencv_phase_unwrapping=ON
 HAVE_opencv_photo=ON
@@ -1608,9 +1607,9 @@ HAVE_opencv_saliency=ON
 HAVE_opencv_sfm=OFF
 HAVE_opencv_shape=ON
 HAVE_opencv_stereo=ON
-HAVE_opencv_stitching=ON
+HAVE_opencv_stitching=OFF
 HAVE_opencv_structured_light=ON
-HAVE_opencv_superres=ON
+HAVE_opencv_superres=OFF
 HAVE_opencv_surface_matching=ON
 HAVE_opencv_text=ON
 HAVE_opencv_tracking=ON
@@ -1620,10 +1619,10 @@ HAVE_opencv_videoio=ON
 HAVE_opencv_videostab=ON
 HAVE_opencv_viz=ON
 HAVE_opencv_world=OFF
-HAVE_opencv_xfeatures2d=ON
-HAVE_opencv_ximgproc=ON
-HAVE_opencv_xobjdetect=ON
-HAVE_opencv_xphoto=ON
+HAVE_opencv_xfeatures2d=OFF
+HAVE_opencv_ximgproc=OFF
+HAVE_opencv_xobjdetect=OFF
+HAVE_opencv_xphoto=OFF
 HDF5_C_COMPILER_EXECUTABLE=/usr/bin/h5cc
 HDF5_C_COMPILER_NO_INTERROGATE=FALSE
 HDF5_C_LIBRARY_dl=/usr/lib/x86_64-linux-gnu/libdl.so
@@ -2158,20 +2157,19 @@ OPENCV_LIB_RUNTIME_DIR_RELATIVE_CMAKECONFIG=../lib
 OPENCV_LICENSES_INSTALL_PATH=share/licenses/opencv4
 OPENCV_LICENSE_FILE=/u03/opencv-4.1.0/LICENSE
 OPENCV_LINKER_LIBS=dl;m;pthread;rt;ippiw;ippicv;cudart_static;dl;rt;nppc;nppial;nppicc;nppicom;nppidei;nppif;nppig;nppim;nppist;nppisu;nppitc;npps;cublas;cufft;-L/usr/local/cuda/lib64;-L/usr/lib/x86_64-linux-gnu
-OPENCV_MODULES_BUILD=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_hdf;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_viz;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_xphoto;opencv_cudacodec;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_cudafeatures2d;opencv_cudastereo;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_cudabgsegm;opencv_cudalegacy;opencv_cudaobjdetect;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_tracking;opencv_cudaoptflow;opencv_stereo;opencv_superres;opencv_videostab
-OPENCV_MODULES_BUILD_ST=aruco;bgsegm;bioinspired;calib3d;ccalib;core;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;datasets;dnn;dnn_objdetect;dpm;face;features2d;flann;freetype;fuzzy;gapi;hdf;hfs;highgui;img_hash;imgcodecs;imgproc;line_descriptor;ml;objdetect;optflow;phase_unwrapping;photo;plot;quality;reg;rgbd;saliency;shape;stereo;stitching;structured_light;superres;surface_matching;text;tracking;ts;video;videoio;videostab;viz;xfeatures2d;ximgproc;xobjdetect;xphoto
-OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_viz;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
-OPENCV_MODULES_DISABLED_AUTO=
-OPENCV_MODULES_DISABLED_AUTO_ST=
+OPENCV_MODULES_BUILD=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_hdf;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_viz;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_cudacodec;opencv_highgui;opencv_ts;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_cudafeatures2d;opencv_cudastereo;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_bgsegm;opencv_cudabgsegm;opencv_cudalegacy;opencv_cudaobjdetect;opencv_dpm;opencv_face;opencv_tracking;opencv_stereo
+OPENCV_MODULES_BUILD_ST=bgsegm;bioinspired;calib3d;ccalib;core;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudastereo;cudawarping;cudev;datasets;dnn;dnn_objdetect;dpm;face;features2d;flann;freetype;fuzzy;gapi;hdf;hfs;highgui;img_hash;imgcodecs;imgproc;line_descriptor;ml;objdetect;phase_unwrapping;photo;plot;quality;reg;rgbd;saliency;shape;stereo;structured_light;surface_matching;text;tracking;ts;video;videoio;videostab;viz
+OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_viz
+OPENCV_MODULES_DISABLED_AUTO=opencv_optflow;opencv_superres;opencv_cudaoptflow
+OPENCV_MODULES_DISABLED_AUTO_ST=cudaoptflow;optflow;superres
 OPENCV_MODULES_DISABLED_FORCE=opencv_java;opencv_js;opencv_cnn_3dobj;opencv_cvv;opencv_matlab;opencv_ovis;opencv_sfm
 OPENCV_MODULES_DISABLED_FORCE_ST=cnn_3dobj;cvv;java;js;matlab;ovis;sfm
-OPENCV_MODULES_DISABLED_USER=opencv_java_bindings_generator;opencv_python_bindings_generator;opencv_python2;opencv_python3;opencv_world
-OPENCV_MODULES_DISABLED_USER_ST=java_bindings_generator;python2;python3;python_bindings_generator;world
+OPENCV_MODULES_DISABLED_USER=opencv_java_bindings_generator;opencv_python_bindings_generator;opencv_python2;opencv_python3;opencv_stitching;opencv_world;opencv_aruco;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MODULES_DISABLED_USER_ST=aruco;java_bindings_generator;python2;python3;python_bindings_generator;stitching;world;xfeatures2d;ximgproc;xobjdetect;xphoto
 OPENCV_MODULES_EXTRA=aruco;bgsegm;bioinspired;ccalib;cnn_3dobj;cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;cvv;datasets;dnn_objdetect;dpm;face;freetype;fuzzy;hdf;hfs;img_hash;java_bindings_generator;line_descriptor;matlab;optflow;ovis;phase_unwrapping;plot;python2;python3;python_bindings_generator;quality;reg;rgbd;saliency;sfm;shape;stereo;structured_light;superres;surface_matching;text;tracking;videostab;viz;xfeatures2d;ximgproc;xobjdetect;xphoto
 OPENCV_MODULES_MAIN=core;imgproc;imgcodecs;videoio;highgui;video;calib3d;features2d;objdetect;dnn;ml;flann;photo;stitching;gapi;java;js;ts;world
-OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_viz;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
-OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
-#define HAVE_OPENCV_BGSEGM
+OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_viz
+OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_BGSEGM
 #define HAVE_OPENCV_BIOINSPIRED
 #define HAVE_OPENCV_CALIB3D
 #define HAVE_OPENCV_CCALIB
@@ -2184,7 +2182,6 @@ OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_CUDAIMGPROC
 #define HAVE_OPENCV_CUDALEGACY
 #define HAVE_OPENCV_CUDAOBJDETECT
-#define HAVE_OPENCV_CUDAOPTFLOW
 #define HAVE_OPENCV_CUDASTEREO
 #define HAVE_OPENCV_CUDAWARPING
 #define HAVE_OPENCV_CUDEV
@@ -2207,7 +2204,6 @@ OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_LINE_DESCRIPTOR
 #define HAVE_OPENCV_ML
 #define HAVE_OPENCV_OBJDETECT
-#define HAVE_OPENCV_OPTFLOW
 #define HAVE_OPENCV_PHASE_UNWRAPPING
 #define HAVE_OPENCV_PHOTO
 #define HAVE_OPENCV_PLOT
@@ -2217,9 +2213,7 @@ OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_SALIENCY
 #define HAVE_OPENCV_SHAPE
 #define HAVE_OPENCV_STEREO
-#define HAVE_OPENCV_STITCHING
 #define HAVE_OPENCV_STRUCTURED_LIGHT
-#define HAVE_OPENCV_SUPERRES
 #define HAVE_OPENCV_SURFACE_MATCHING
 #define HAVE_OPENCV_TEXT
 #define HAVE_OPENCV_TRACKING
@@ -2227,16 +2221,10 @@ OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_VIDEOIO
 #define HAVE_OPENCV_VIDEOSTAB
 #define HAVE_OPENCV_VIZ
-#define HAVE_OPENCV_XFEATURES2D
-#define HAVE_OPENCV_XIMGPROC
-#define HAVE_OPENCV_XOBJDETECT
-#define HAVE_OPENCV_XPHOTO
 
 
 OPENCV_MODULE_opencv_aruco_BINARY_DIR=/u03/build/modules/aruco
 OPENCV_MODULE_opencv_aruco_CLASS=PUBLIC
-OPENCV_MODULE_opencv_aruco_DEPS=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
-OPENCV_MODULE_opencv_aruco_DEPS_EXT=
 OPENCV_MODULE_opencv_aruco_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
 OPENCV_MODULE_opencv_aruco_DESCRIPTION=ArUco Marker Detection
 OPENCV_MODULE_opencv_aruco_HEADERS=/u03/opencv_contrib-4.1.0/modules/aruco/include/opencv2/aruco.hpp;/u03/opencv_contrib-4.1.0/modules/aruco/include/opencv2/aruco/charuco.hpp;/u03/opencv_contrib-4.1.0/modules/aruco/include/opencv2/aruco/dictionary.hpp
@@ -2484,8 +2472,6 @@ OPENCV_MODULE_opencv_cudaobjdetect_WRAPPERS=python_bindings_generator;python2;py
 OPENCV_MODULE_opencv_cudaoptflow_BINARY_DIR=/u03/build/modules/cudaoptflow
 OPENCV_MODULE_opencv_cudaoptflow_CLASS=PUBLIC
 OPENCV_MODULE_opencv_cudaoptflow_CUDA_OBJECTS=/u03/build/modules/cudaoptflow/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_farneback.cu.o;/u03/build/modules/cudaoptflow/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_pyrlk.cu.o;/u03/build/modules/cudaoptflow/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_tvl1flow.cu.o
-OPENCV_MODULE_opencv_cudaoptflow_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow
-OPENCV_MODULE_opencv_cudaoptflow_DEPS_EXT=
 OPENCV_MODULE_opencv_cudaoptflow_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow
 OPENCV_MODULE_opencv_cudaoptflow_DESCRIPTION=CUDA-accelerated Optical Flow
 OPENCV_MODULE_opencv_cudaoptflow_HEADERS=/u03/opencv_contrib-4.1.0/modules/cudaoptflow/include/opencv2/cudaoptflow.hpp
@@ -2905,8 +2891,6 @@ OPENCV_MODULE_opencv_objdetect_SOURCES=/u03/opencv-4.1.0/modules/objdetect/src/c
 OPENCV_MODULE_opencv_objdetect_WRAPPERS=java;js;python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_optflow_BINARY_DIR=/u03/build/modules/optflow
 OPENCV_MODULE_opencv_optflow_CLASS=PUBLIC
-OPENCV_MODULE_opencv_optflow_DEPS=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video;opencv_ximgproc
-OPENCV_MODULE_opencv_optflow_DEPS_EXT=
 OPENCV_MODULE_opencv_optflow_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video;opencv_ximgproc
 OPENCV_MODULE_opencv_optflow_DESCRIPTION=Optical Flow Algorithms
 OPENCV_MODULE_opencv_optflow_HEADERS=/u03/opencv_contrib-4.1.0/modules/optflow/include/opencv2/optflow.hpp;/u03/opencv_contrib-4.1.0/modules/optflow/include/opencv2/optflow/motempl.hpp;/u03/opencv_contrib-4.1.0/modules/optflow/include/opencv2/optflow/pcaflow.hpp;/u03/opencv_contrib-4.1.0/modules/optflow/include/opencv2/optflow/rlofflow.hpp;/u03/opencv_contrib-4.1.0/modules/optflow/include/opencv2/optflow/sparse_matching_gpc.hpp
@@ -3118,8 +3102,6 @@ OPENCV_MODULE_opencv_stereo_WRAPPERS=
 OPENCV_MODULE_opencv_stitching_BINARY_DIR=/u03/build/modules/stitching
 OPENCV_MODULE_opencv_stitching_CLASS=PUBLIC
 OPENCV_MODULE_opencv_stitching_CUDA_OBJECTS=/u03/build/modules/stitching/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_build_warp_maps.cu.o;/u03/build/modules/stitching/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_multiband_blend.cu.o
-OPENCV_MODULE_opencv_stitching_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_ml;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_cudafeatures2d;opencv_objdetect;opencv_shape;opencv_video;opencv_xfeatures2d;opencv_cudalegacy
-OPENCV_MODULE_opencv_stitching_DEPS_EXT=
 OPENCV_MODULE_opencv_stitching_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_ml;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_cudafeatures2d;opencv_objdetect;opencv_shape;opencv_video;opencv_xfeatures2d;opencv_cudalegacy
 OPENCV_MODULE_opencv_stitching_DESCRIPTION=Images stitching
 OPENCV_MODULE_opencv_stitching_HEADERS=/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/warpers.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/autocalib.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/blenders.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/camera.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/matchers.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/timelapsers.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/util.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/warpers.hpp;/u03/opencv-4.1.0/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp
@@ -3153,8 +3135,6 @@ OPENCV_MODULE_opencv_structured_light_WRAPPERS=java;python_bindings_generator;py
 OPENCV_MODULE_opencv_superres_BINARY_DIR=/u03/build/modules/superres
 OPENCV_MODULE_opencv_superres_CLASS=PUBLIC
 OPENCV_MODULE_opencv_superres_CUDA_OBJECTS=/u03/build/modules/superres/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_btv_l1_gpu.cu.o
-OPENCV_MODULE_opencv_superres_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_cudacodec;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow;opencv_cudaoptflow
-OPENCV_MODULE_opencv_superres_DEPS_EXT=
 OPENCV_MODULE_opencv_superres_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_videoio;opencv_cudacodec;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow;opencv_cudaoptflow
 OPENCV_MODULE_opencv_superres_DESCRIPTION=Super Resolution
 OPENCV_MODULE_opencv_superres_HEADERS=/u03/opencv_contrib-4.1.0/modules/superres/include/opencv2/superres.hpp;/u03/opencv_contrib-4.1.0/modules/superres/include/opencv2/superres/optical_flow.hpp
@@ -3273,9 +3253,9 @@ OPENCV_MODULE_opencv_videoio_WRAPPERS=java;python_bindings_generator;python2;pyt
 OPENCV_MODULE_opencv_videostab_BINARY_DIR=/u03/build/modules/videostab
 OPENCV_MODULE_opencv_videostab_CLASS=PUBLIC
 OPENCV_MODULE_opencv_videostab_CUDA_OBJECTS=/u03/build/modules/videostab/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_global_motion.cu.o
-OPENCV_MODULE_opencv_videostab_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow;opencv_cudaoptflow
+OPENCV_MODULE_opencv_videostab_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video
 OPENCV_MODULE_opencv_videostab_DEPS_EXT=
-OPENCV_MODULE_opencv_videostab_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect;opencv_video;opencv_ximgproc;opencv_cudalegacy;opencv_optflow;opencv_cudaoptflow
+OPENCV_MODULE_opencv_videostab_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video
 OPENCV_MODULE_opencv_videostab_DESCRIPTION=Video stabilization
 OPENCV_MODULE_opencv_videostab_HEADERS=/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/deblurring.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/fast_marching.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/frame_source.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/global_motion.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/inpainting.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/log.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/motion_core.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/optical_flow.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/ring_buffer.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/stabilizer.hpp;/u03/opencv_contrib-4.1.0/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp
 OPENCV_MODULE_opencv_videostab_IS_PART_OF_WORLD=ON
@@ -3319,8 +3299,6 @@ OPENCV_MODULE_opencv_world_WRAPPERS=
 OPENCV_MODULE_opencv_xfeatures2d_BINARY_DIR=/u03/build/modules/xfeatures2d
 OPENCV_MODULE_opencv_xfeatures2d_CLASS=PUBLIC
 OPENCV_MODULE_opencv_xfeatures2d_CUDA_OBJECTS=/u03/build/modules/xfeatures2d/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_surf.cu.o
-OPENCV_MODULE_opencv_xfeatures2d_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_shape
-OPENCV_MODULE_opencv_xfeatures2d_DEPS_EXT=
 OPENCV_MODULE_opencv_xfeatures2d_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_shape
 OPENCV_MODULE_opencv_xfeatures2d_DESCRIPTION=Contributed/Experimental Algorithms for Salient 2D Features Detection
 OPENCV_MODULE_opencv_xfeatures2d_HEADERS=/u03/opencv_contrib-4.1.0/modules/xfeatures2d/include/opencv2/xfeatures2d.hpp;/u03/opencv_contrib-4.1.0/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp;/u03/opencv_contrib-4.1.0/modules/xfeatures2d/include/opencv2/xfeatures2d/nonfree.hpp
@@ -3336,8 +3314,6 @@ OPENCV_MODULE_opencv_xfeatures2d_SOURCES=/u03/opencv_contrib-4.1.0/modules/xfeat
 OPENCV_MODULE_opencv_xfeatures2d_WRAPPERS=java;python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_ximgproc_BINARY_DIR=/u03/build/modules/ximgproc
 OPENCV_MODULE_opencv_ximgproc_CLASS=PUBLIC
-OPENCV_MODULE_opencv_ximgproc_DEPS=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
-OPENCV_MODULE_opencv_ximgproc_DEPS_EXT=
 OPENCV_MODULE_opencv_ximgproc_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
 OPENCV_MODULE_opencv_ximgproc_DESCRIPTION=Extended image processing module. It includes edge-aware filters and etc.
 OPENCV_MODULE_opencv_ximgproc_HEADERS=/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/brightedges.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/color_match.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/deriche_filter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/disparity_filter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/edge_filter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/edgeboxes.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/edgepreserving_filter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/estimated_covariance.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/fast_hough_transform.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/fast_line_detector.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/fourier_descriptors.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/lsc.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/paillou_filter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/peilin.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/ridgefilter.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/run_length_morphology.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/seeds.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/segmentation.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/slic.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/sparse_match_interpolator.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/structured_edge_detection.hpp;/u03/opencv_contrib-4.1.0/modules/ximgproc/include/opencv2/ximgproc/weighted_median_filter.hpp
@@ -3353,8 +3329,6 @@ OPENCV_MODULE_opencv_ximgproc_SOURCES=/u03/opencv_contrib-4.1.0/modules/ximgproc
 OPENCV_MODULE_opencv_ximgproc_WRAPPERS=java;python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_xobjdetect_BINARY_DIR=/u03/build/modules/xobjdetect
 OPENCV_MODULE_opencv_xobjdetect_CLASS=PUBLIC
-OPENCV_MODULE_opencv_xobjdetect_DEPS=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect
-OPENCV_MODULE_opencv_xobjdetect_DEPS_EXT=
 OPENCV_MODULE_opencv_xobjdetect_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_objdetect
 OPENCV_MODULE_opencv_xobjdetect_DESCRIPTION=Object detection algorithms
 OPENCV_MODULE_opencv_xobjdetect_HEADERS=/u03/opencv_contrib-4.1.0/modules/xobjdetect/include/opencv2/xobjdetect.hpp
@@ -3370,8 +3344,6 @@ OPENCV_MODULE_opencv_xobjdetect_SOURCES=/u03/opencv_contrib-4.1.0/modules/xobjde
 OPENCV_MODULE_opencv_xobjdetect_WRAPPERS=python_bindings_generator;python2;python3
 OPENCV_MODULE_opencv_xphoto_BINARY_DIR=/u03/build/modules/xphoto
 OPENCV_MODULE_opencv_xphoto_CLASS=PUBLIC
-OPENCV_MODULE_opencv_xphoto_DEPS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_photo
-OPENCV_MODULE_opencv_xphoto_DEPS_EXT=
 OPENCV_MODULE_opencv_xphoto_DEPS_TO_LINK=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_photo
 OPENCV_MODULE_opencv_xphoto_DESCRIPTION=Addon to basic photo module
 OPENCV_MODULE_opencv_xphoto_HEADERS=/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/bm3d_image_denoising.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/dct_image_denoising.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/inpainting.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/oilpainting.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/tonemap.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/include/opencv2/xphoto/white_balance.hpp
@@ -3385,7 +3357,7 @@ OPENCV_MODULE_opencv_xphoto_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_xphoto_REQ_DEPS=opencv_core;opencv_imgproc;opencv_photo
 OPENCV_MODULE_opencv_xphoto_SOURCES=/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_image_denoising.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/dct_image_denoising.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/grayworld_white_balance.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/inpainting.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/learning_based_color_balance.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/oilpainting.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/simple_color_balance.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/tonemap.cpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/advanced_types.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/annf.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/blending.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_commons.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_step1.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_step2.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_invoker_structs.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_1D.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_2D.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/bm3d_denoising_transforms_haar.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/gcgraph.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/kaiser_window.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/learning_based_color_balance_model.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/norm2.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/photomontage.hpp;/u03/opencv_contrib-4.1.0/modules/xphoto/src/whs.hpp
 OPENCV_MODULE_opencv_xphoto_WRAPPERS=java;python_bindings_generator;python2;python3
-OPENCV_MOD_LIST=opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_calib3d;opencv_ccalib;opencv_core;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_features2d;opencv_flann;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hdf;opencv_hfs;opencv_highgui;opencv_img_hash;opencv_imgcodecs;opencv_imgproc;opencv_line_descriptor;opencv_ml;opencv_objdetect;opencv_optflow;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_stitching;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_video;opencv_videoio;opencv_videostab;opencv_viz;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+OPENCV_MOD_LIST=opencv_bgsegm;opencv_bioinspired;opencv_calib3d;opencv_ccalib;opencv_core;opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_datasets;opencv_dnn;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_features2d;opencv_flann;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hdf;opencv_hfs;opencv_highgui;opencv_img_hash;opencv_imgcodecs;opencv_imgproc;opencv_line_descriptor;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_video;opencv_videoio;opencv_videostab;opencv_viz
 OPENCV_OTHER_INSTALL_PATH=share/opencv4
 OPENCV_PACKAGE_ARCH_SUFFIX=x86_64
 OPENCV_PYTHON3_VERSION=OFF
@@ -3503,21 +3475,19 @@ OPT=
 OPT2=
 OUTPUT=Change Dir: /u03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3fb4c/fast"
+Run Build Command:"/usr/bin/make" "cmTC_28f42/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28f42.dir/build.make CMakeFiles/cmTC_28f42.dir/build
 make[1]: Entering directory '/u03/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_3fb4c.dir/build.make CMakeFiles/cmTC_3fb4c.dir/build
-make[2]: Entering directory '/u03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3fb4c.dir/vtk_test.cpp.o
-/usr/bin/c++   -I/usr/include/vtk-7.1 -I/usr/include/x86_64-linux-gnu -I/usr/include/freetype2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -std=c++11 -o CMakeFiles/cmTC_3fb4c.dir/vtk_test.cpp.o -c /u03/opencv-4.1.0/cmake/checks/vtk_test.cpp
-Linking CXX executable cmTC_3fb4c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fb4c.dir/link.txt --verbose=1
-/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_3fb4c.dir/vtk_test.cpp.o  -o cmTC_3fb4c /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libtiff.so /usr/lib/x86_64-linux-gnu/libvtkInteractionStyle-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersExtraction-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersStatistics-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkImagingFourier-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkalglib-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingLOD-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersModeling-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOPLY-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersTexture-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingFreeType-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/libvtkIOExport-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingGL2PSOpenGL2-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libgl2ps.so /usr/lib/x86_64-linux-gnu/libvtkIOGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOLegacy-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOImage-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkmetaio-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libvtkImagingCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libGLEW.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libXt.so /usr/lib/x86_64-linux-gnu/libvtkRenderingCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonColor-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersSources-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersGeneral-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonComputationalGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonExecutionModel-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonDataModel-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonTransforms-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonMisc-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonMath-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonSystem-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtksys-7.1.so.7.1.1 -ldl 
-make[2]: Leaving directory '/u03/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_28f42.dir/vtk_test.cpp.o
+/usr/bin/c++   -I/usr/include/vtk-7.1 -I/usr/include/x86_64-linux-gnu -I/usr/include/freetype2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -g -fPIE   -std=c++11 -o CMakeFiles/cmTC_28f42.dir/vtk_test.cpp.o -c /u03/opencv-4.1.0/cmake/checks/vtk_test.cpp
+Linking CXX executable cmTC_28f42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28f42.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -g    -Wl,--gc-sections  CMakeFiles/cmTC_28f42.dir/vtk_test.cpp.o  -o cmTC_28f42 /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libtiff.so /usr/lib/x86_64-linux-gnu/libvtkInteractionStyle-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersExtraction-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersStatistics-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkImagingFourier-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkalglib-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingLOD-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersModeling-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOPLY-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersTexture-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingFreeType-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/libvtkIOExport-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingGL2PSOpenGL2-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libgl2ps.so /usr/lib/x86_64-linux-gnu/libvtkIOGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOLegacy-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOImage-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkmetaio-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libvtkImagingCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libGLEW.so /usr/lib/x86_64-linux-gnu/libSM.so /usr/lib/x86_64-linux-gnu/libICE.so /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so /usr/lib/x86_64-linux-gnu/libXt.so /usr/lib/x86_64-linux-gnu/libvtkRenderingCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonColor-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersSources-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersGeneral-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonComputationalGeometry-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkFiltersCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkIOCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonExecutionModel-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonDataModel-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonTransforms-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonMisc-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonMath-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonSystem-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtkCommonCore-7.1.so.7.1.1 /usr/lib/x86_64-linux-gnu/libvtksys-7.1.so.7.1.1 -ldl 
 make[1]: Leaving directory '/u03/build/CMakeFiles/CMakeTmp'
 
 OpenBLAS_INCLUDE_DIR=OpenBLAS_INCLUDE_DIR-NOTFOUND
 OpenBLAS_LIB=OpenBLAS_LIB-NOTFOUND
-OpenCVModules_TARGETS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_hdf;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_viz;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_xphoto;opencv_cudacodec;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_cudafeatures2d;opencv_cudastereo;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_aruco;opencv_bgsegm;opencv_cudabgsegm;opencv_cudalegacy;opencv_cudaobjdetect;opencv_dpm;opencv_face;opencv_optflow;opencv_stitching;opencv_tracking;opencv_cudaoptflow;opencv_stereo;opencv_superres;opencv_videostab
+OpenCVModules_TARGETS=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_flann;opencv_hdf;opencv_imgproc;opencv_ml;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_reg;opencv_surface_matching;opencv_viz;opencv_cudafilters;opencv_cudaimgproc;opencv_cudawarping;opencv_dnn;opencv_freetype;opencv_fuzzy;opencv_gapi;opencv_hfs;opencv_img_hash;opencv_imgcodecs;opencv_photo;opencv_videoio;opencv_cudacodec;opencv_highgui;opencv_bioinspired;opencv_dnn_objdetect;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_cudafeatures2d;opencv_cudastereo;opencv_datasets;opencv_objdetect;opencv_rgbd;opencv_shape;opencv_structured_light;opencv_video;opencv_videostab;opencv_bgsegm;opencv_cudabgsegm;opencv_cudalegacy;opencv_cudaobjdetect;opencv_dpm;opencv_face;opencv_tracking;opencv_stereo
 OpenCV_BINARY_DIR=/u03/build
 OpenCV_CUDA_CC=-gencode;arch=compute_61,code=sm_61;-D_FORCE_INLINES
 OpenCV_HAL=OpenCV_HAL
@@ -3597,8 +3567,8 @@ PkgConfig_FOUND=TRUE
 ProgramFiles_ENV_PATH=
 Protobuf_VERSION=3.5.1
 RUN_CONFIGURE=ON
-STD_OPENCV_DEV=libopencv-dev;libopencv-calib3d-dev;libopencv-core-dev;libopencv-cudaarithm-dev;libopencv-cudabgsegm-dev;libopencv-cudacodec-dev;libopencv-cudafeatures2d-dev;libopencv-cudafilters-dev;libopencv-cudaimgproc-dev;libopencv-cudalegacy-dev;libopencv-cudaobjdetect-dev;libopencv-cudaoptflow-dev;libopencv-cudastereo-dev;libopencv-cudawarping-dev;libopencv-cudev-dev;libopencv-features2d-dev;libopencv-flann-dev;libopencv-highgui-dev;libopencv-imgcodecs-dev;libopencv-imgproc-dev;libopencv-ml-dev;libopencv-objdetect-dev;libopencv-photo-dev;libopencv-shape-dev;libopencv-stitching-dev;libopencv-superres-dev;libopencv-ts-dev;libopencv-video-dev;libopencv-videoio-dev;libopencv-videostab-dev;libopencv-viz-dev
-STD_OPENCV_LIBS=opencv-data;libopencv-calib3d4.0;libopencv-core4.0;libopencv-cudaarithm4.0;libopencv-cudabgsegm4.0;libopencv-cudacodec4.0;libopencv-cudafeatures2d4.0;libopencv-cudafilters4.0;libopencv-cudaimgproc4.0;libopencv-cudalegacy4.0;libopencv-cudaobjdetect4.0;libopencv-cudaoptflow4.0;libopencv-cudastereo4.0;libopencv-cudawarping4.0;libopencv-cudev4.0;libopencv-features2d4.0;libopencv-flann4.0;libopencv-highgui4.0;libopencv-imgcodecs4.0;libopencv-imgproc4.0;libopencv-ml4.0;libopencv-objdetect4.0;libopencv-photo4.0;libopencv-shape4.0;libopencv-stitching4.0;libopencv-superres4.0;libopencv-ts4.0;libopencv-video4.0;libopencv-videoio4.0;libopencv-videostab4.0;libopencv-viz4.0
+STD_OPENCV_DEV=libopencv-dev;libopencv-calib3d-dev;libopencv-core-dev;libopencv-cudaarithm-dev;libopencv-cudabgsegm-dev;libopencv-cudacodec-dev;libopencv-cudafeatures2d-dev;libopencv-cudafilters-dev;libopencv-cudaimgproc-dev;libopencv-cudalegacy-dev;libopencv-cudaobjdetect-dev;libopencv-cudastereo-dev;libopencv-cudawarping-dev;libopencv-cudev-dev;libopencv-features2d-dev;libopencv-flann-dev;libopencv-highgui-dev;libopencv-imgcodecs-dev;libopencv-imgproc-dev;libopencv-ml-dev;libopencv-objdetect-dev;libopencv-photo-dev;libopencv-shape-dev;libopencv-ts-dev;libopencv-video-dev;libopencv-videoio-dev;libopencv-videostab-dev;libopencv-viz-dev
+STD_OPENCV_LIBS=opencv-data;libopencv-calib3d4.0;libopencv-core4.0;libopencv-cudaarithm4.0;libopencv-cudabgsegm4.0;libopencv-cudacodec4.0;libopencv-cudafeatures2d4.0;libopencv-cudafilters4.0;libopencv-cudaimgproc4.0;libopencv-cudalegacy4.0;libopencv-cudaobjdetect4.0;libopencv-cudastereo4.0;libopencv-cudawarping4.0;libopencv-cudev4.0;libopencv-features2d4.0;libopencv-flann4.0;libopencv-highgui4.0;libopencv-imgcodecs4.0;libopencv-imgproc4.0;libopencv-ml4.0;libopencv-objdetect4.0;libopencv-photo4.0;libopencv-shape4.0;libopencv-ts4.0;libopencv-video4.0;libopencv-videoio4.0;libopencv-videostab4.0;libopencv-viz4.0
 STR1=#define IPP_VERSION_MAJOR  2019
 STR2=#define IPP_VERSION_MINOR  0
 STR3=#define IPP_VERSION_UPDATE 0
@@ -3620,21 +3590,19 @@ TIFF_VERSION_LINES=#define TIFF_VERSION_CLASSIC 42;#define TIFF_VERSION_BIG 43
 TIFF_VERSION_STRING=4.0.9
 TRY_OUT=Change Dir: /u03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2e052/fast"
+Run Build Command:"/usr/bin/make" "cmTC_e9874/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9874.dir/build.make CMakeFiles/cmTC_e9874.dir/build
 make[1]: Entering directory '/u03/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2e052.dir/build.make CMakeFiles/cmTC_2e052.dir/build
-make[2]: Entering directory '/u03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2e052.dir/opencl.cpp.o
-/usr/bin/c++   -I/u03/opencv-4.1.0/3rdparty/include/opencl/1.2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG -fPIE   -std=c++11 -o CMakeFiles/cmTC_2e052.dir/opencl.cpp.o -c /u03/opencv-4.1.0/cmake/checks/opencl.cpp
+Building CXX object CMakeFiles/cmTC_e9874.dir/opencl.cpp.o
+/usr/bin/c++   -I/u03/opencv-4.1.0/3rdparty/include/opencl/1.2  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden  -g -fPIE   -std=c++11 -o CMakeFiles/cmTC_e9874.dir/opencl.cpp.o -c /u03/opencv-4.1.0/cmake/checks/opencl.cpp
 /u03/opencv-4.1.0/cmake/checks/opencl.cpp:6:2: error: #error OpenCL is valid
  #error OpenCL is valid
   ^~~~~
-CMakeFiles/cmTC_2e052.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_2e052.dir/opencl.cpp.o' failed
-make[2]: *** [CMakeFiles/cmTC_2e052.dir/opencl.cpp.o] Error 1
-make[2]: Leaving directory '/u03/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_2e052/fast' failed
-make[1]: *** [cmTC_2e052/fast] Error 2
+CMakeFiles/cmTC_e9874.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e9874.dir/opencl.cpp.o' failed
+make[1]: *** [CMakeFiles/cmTC_e9874.dir/opencl.cpp.o] Error 1
 make[1]: Leaving directory '/u03/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e9874/fast' failed
+make: *** [cmTC_e9874/fast] Error 2
 
 Tesseract_CFLAGS=-I/usr/include/tesseract;-I/usr/include/leptonica
 Tesseract_CFLAGS_I=
@@ -3769,7 +3737,7 @@ WITH_OPENCLAMDBLAS=ON
 WITH_OPENCLAMDFFT=ON
 WITH_OPENCL_SVM=OFF
 WITH_OPENEXR=ON
-WITH_OPENGL=OFF
+WITH_OPENGL=ON
 WITH_OPENMP=OFF
 WITH_OPENNI=OFF
 WITH_OPENNI2=OFF
@@ -3837,13 +3805,13 @@ SET(CPACK_BINARY_WIX "")
 SET(CPACK_BINARY_ZIP "")
 SET(CPACK_BUILD_SOURCE_DIRS "/u03/opencv-4.1.0;/u03/build")
 SET(CPACK_CMAKE_GENERATOR "Unix Makefiles")
-SET(CPACK_COMPONENTS_ALL "dev;libs;licenses;main;scripts")
-SET(CPACK_COMPONENT_DEV_CONFLICTS "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
+SET(CPACK_COMPONENTS_ALL "dev;libs;licenses;scripts")
+SET(CPACK_COMPONENT_DEV_CONFLICTS "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
 SET(CPACK_COMPONENT_DEV_DEPENDS "libs")
 SET(CPACK_COMPONENT_DEV_DESCRIPTION "Development files for Open Source Computer Vision Library")
 SET(CPACK_COMPONENT_DEV_DISPLAY_NAME "Development files")
-SET(CPACK_COMPONENT_DEV_PROVIDES "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
-SET(CPACK_COMPONENT_DEV_REPLACES "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudaoptflow-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-stitching-dev, libopencv-superres-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
+SET(CPACK_COMPONENT_DEV_PROVIDES "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
+SET(CPACK_COMPONENT_DEV_REPLACES "libopencv-dev, libopencv-calib3d-dev, libopencv-core-dev, libopencv-cudaarithm-dev, libopencv-cudabgsegm-dev, libopencv-cudacodec-dev, libopencv-cudafeatures2d-dev, libopencv-cudafilters-dev, libopencv-cudaimgproc-dev, libopencv-cudalegacy-dev, libopencv-cudaobjdetect-dev, libopencv-cudastereo-dev, libopencv-cudawarping-dev, libopencv-cudev-dev, libopencv-features2d-dev, libopencv-flann-dev, libopencv-highgui-dev, libopencv-imgcodecs-dev, libopencv-imgproc-dev, libopencv-ml-dev, libopencv-objdetect-dev, libopencv-photo-dev, libopencv-shape-dev, libopencv-ts-dev, libopencv-video-dev, libopencv-videoio-dev, libopencv-videostab-dev, libopencv-viz-dev")
 SET(CPACK_COMPONENT_DOCS_CONFLICTS "opencv-doc")
 SET(CPACK_COMPONENT_DOCS_DEPENDS "libs")
 SET(CPACK_COMPONENT_DOCS_DESCRIPTION "Documentation for Open Source Computer Vision Library")
@@ -3854,11 +3822,11 @@ SET(CPACK_COMPONENT_JAVA_DESCRIPTION "Java bindings for Open Source Computer Vis
 SET(CPACK_COMPONENT_JAVA_DISPLAY_NAME "Java bindings")
 SET(CPACK_COMPONENT_JAVA_PROVIDES "libopencv4.0-java, libopencv4.0-jni")
 SET(CPACK_COMPONENT_JAVA_REPLACES "libopencv4.0-java, libopencv4.0-jni")
-SET(CPACK_COMPONENT_LIBS_CONFLICTS "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
+SET(CPACK_COMPONENT_LIBS_CONFLICTS "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
 SET(CPACK_COMPONENT_LIBS_DESCRIPTION "Open Computer Vision Library")
 SET(CPACK_COMPONENT_LIBS_DISPLAY_NAME "Libraries and data")
-SET(CPACK_COMPONENT_LIBS_PROVIDES "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
-SET(CPACK_COMPONENT_LIBS_REPLACES "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudaoptflow4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-stitching4.0, libopencv-superres4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
+SET(CPACK_COMPONENT_LIBS_PROVIDES "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
+SET(CPACK_COMPONENT_LIBS_REPLACES "opencv-data, libopencv-calib3d4.0, libopencv-core4.0, libopencv-cudaarithm4.0, libopencv-cudabgsegm4.0, libopencv-cudacodec4.0, libopencv-cudafeatures2d4.0, libopencv-cudafilters4.0, libopencv-cudaimgproc4.0, libopencv-cudalegacy4.0, libopencv-cudaobjdetect4.0, libopencv-cudastereo4.0, libopencv-cudawarping4.0, libopencv-cudev4.0, libopencv-features2d4.0, libopencv-flann4.0, libopencv-highgui4.0, libopencv-imgcodecs4.0, libopencv-imgproc4.0, libopencv-ml4.0, libopencv-objdetect4.0, libopencv-photo4.0, libopencv-shape4.0, libopencv-ts4.0, libopencv-video4.0, libopencv-videoio4.0, libopencv-videostab4.0, libopencv-viz4.0")
 SET(CPACK_COMPONENT_LIBS_REQUIRED "TRUE")
 SET(CPACK_COMPONENT_PYTHON_CONFLICTS "python-opencv")
 SET(CPACK_COMPONENT_PYTHON_DEPENDS "libs")
@@ -3990,7 +3958,7 @@ _pkg=
 _pkg_is_required=0
 _pkg_is_silent=0
 _pkg_modules=gthread-2.0
-_rev_deps=opencv_xphoto;opencv_photo;opencv_cudaimgproc;opencv_cudafilters;opencv_imgproc;opencv_cudaarithm;opencv_core;opencv_cudev
+_rev_deps=opencv_viz;opencv_core;opencv_cudev
 _tmp=/usr/local/cuda/lib64
 _type=STATIC_LIBRARY
 _var=
@@ -4000,7 +3968,7 @@ _vtk_installed_prefix_full=/usr/lib/cmake/vtk-7.1
 _vtk_requested_prefix=/usr/lib/cmake/vtk-7.1
 _vtk_requested_prefix_full=/usr/lib/cmake/vtk-7.1
 ade_LIB_DEPENDS=
-apps_status=tests;perf_tests;apps
+apps_status=tests;perf_tests
 arg=
 c=
 compatible_MESSAGE_NEVER=MESSAGE_NEVER
@@ -4012,10 +3980,10 @@ cpack_source_input_file=/usr/share/cmake-3.10/Templates/CPackConfig.cmake.in
 cuda_features=CUFFT;CUBLAS;NVCUVID
 cuda_version_suffix=10-0
 dep=
-deps=opencv_cudev;opencv_core;opencv_cudaarithm;opencv_imgproc;opencv_cudafilters;opencv_cudaimgproc;opencv_photo
+deps=opencv_cudev;opencv_core
 deps_3rdparty=
 deps_extra=m;pthread;cudart_static;dl;rt;nppc;nppial;nppicc;nppicom;nppidei;nppif;nppig;nppim;nppist;nppisu;nppitc;npps;cublas;cufft;-L/usr/local/cuda/lib64;-L/usr/lib/x86_64-linux-gnu
-deps_modules=opencv_gapi;opencv_stitching;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudabgsegm;opencv_cudafeatures2d;opencv_cudaobjdetect;opencv_cudastereo;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_superres;opencv_cudacodec;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_videostab;opencv_cudaoptflow;opencv_optflow;opencv_cudalegacy;opencv_video;opencv_cudawarping;opencv_viz;opencv_xfeatures2d;opencv_shape;opencv_ml;opencv_ximgproc;opencv_xobjdetect;opencv_objdetect;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_flann;opencv_xphoto;opencv_photo;opencv_cudaimgproc;opencv_cudafilters;opencv_imgproc;opencv_cudaarithm;opencv_core;opencv_cudev
+deps_modules=opencv_gapi;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudaobjdetect;opencv_cudalegacy;opencv_cudastereo;opencv_dnn_objdetect;opencv_dpm;opencv_face;opencv_objdetect;opencv_freetype;opencv_fuzzy;opencv_hdf;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_quality;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_ml;opencv_videostab;opencv_video;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_photo;opencv_imgcodecs;opencv_cudawarping;opencv_cudaimgproc;opencv_cudafilters;opencv_imgproc;opencv_flann;opencv_cudaarithm;opencv_viz;opencv_core;opencv_cudev
 dir=
 docs_status=NO
 f=
@@ -4367,7 +4335,7 @@ opencv_videoio_LIB_DEPENDS=general;opencv_cudev;general;opencv_core;general;open
 opencv_videoio_SOURCE_DIR=/u03/opencv-4.1.0/modules/videoio
 opencv_videoio_pch_dephelp_LIB_DEPENDS=
 opencv_videostab_BINARY_DIR=/u03/build/modules/videostab
-opencv_videostab_LIB_DEPENDS=general;opencv_cudev;general;opencv_core;general;opencv_cudaarithm;general;opencv_flann;general;opencv_imgproc;general;opencv_cudafilters;general;opencv_cudaimgproc;general;opencv_cudawarping;general;opencv_imgcodecs;general;opencv_photo;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_objdetect;general;opencv_video;general;opencv_ximgproc;general;opencv_cudalegacy;general;opencv_optflow;general;opencv_cudaoptflow;general;dl;general;m;general;pthread;general;rt;general;ippiw;general;ippicv;general;cudart_static;general;dl;general;rt;general;nppc;general;nppial;general;nppicc;general;nppicom;general;nppidei;general;nppif;general;nppig;general;nppim;general;nppist;general;nppisu;general;nppitc;general;npps;general;cublas;general;cufft;general;-L/usr/local/cuda/lib64;general;-L/usr/lib/x86_64-linux-gnu;general;cudart_static;general;dl;general;rt;general;nppc;general;nppial;general;nppicc;general;nppicom;general;nppidei;general;nppif;general;nppig;general;nppim;general;nppist;general;nppisu;general;nppitc;general;npps;
+opencv_videostab_LIB_DEPENDS=general;opencv_cudev;general;opencv_core;general;opencv_cudaarithm;general;opencv_flann;general;opencv_imgproc;general;opencv_cudafilters;general;opencv_cudaimgproc;general;opencv_cudawarping;general;opencv_imgcodecs;general;opencv_photo;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_video;general;dl;general;m;general;pthread;general;rt;general;ippiw;general;ippicv;general;cudart_static;general;dl;general;rt;general;nppc;general;nppial;general;nppicc;general;nppicom;general;nppidei;general;nppif;general;nppig;general;nppim;general;nppist;general;nppisu;general;nppitc;general;npps;general;cublas;general;cufft;general;-L/usr/local/cuda/lib64;general;-L/usr/lib/x86_64-linux-gnu;general;cudart_static;general;dl;general;rt;general;nppc;general;nppial;general;nppicc;general;nppicom;general;nppidei;general;nppif;general;nppig;general;nppim;general;nppist;general;nppisu;general;nppitc;general;npps;
 opencv_videostab_SOURCE_DIR=/u03/opencv_contrib-4.1.0/modules/videostab
 opencv_videostab_pch_dephelp_LIB_DEPENDS=
 opencv_visualisation_BINARY_DIR=/u03/build/apps/visualisation
